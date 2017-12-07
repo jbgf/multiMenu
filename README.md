@@ -4,6 +4,7 @@ jquery.multiMenu.js
 其中还引入了jsel插件扩展搜索功能，
 样式部分使用sass编写
 插件配置
+---
     allData:json,<br>
     outer:".tableWrapper01",<br>
     enableAddToOuter:1,      /*允许更新targetInput*/<br>
