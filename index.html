@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>XX出入境检验检疫局检验检疫技术中心官网</title>
+    <meta name="keywords" content="XX出入境检验检疫局检验检疫技术中心官网">
+    <meta name="description" content="XX出入境检验检疫局检验检疫技术中心官网">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.multiMenu.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/layer/3.0.3/layer.js"></script>
+    <!--jsel为本demo引入的搜索插件-->
+    <script type="text/javascript" src="js/jsel.js"></script>
+    <script type="text/javascript" src="js/jquery.multiMenu.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background: #fff;
+            font: normal 12px/22px å®‹ä½“;
+            color: #666;
+            font-family: 'Microsoft YaHei', "Helvetica Neue", Helvetica, 'Hiragino Sans GB', 'WenQuanYi Micro Hei', Arial, sans-serif;
+        }
+
+        input {
+            border: none;
+        }
+
+        .container1000 {
+            width: 1000px;
+            margin: 0 auto;
+
+        }
+
+        .white {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="centerMiddle content-bg ">
+    <div class="centerWrapper container1000 ">
+        <div class="commonWrapper">
+
+            <!-- template01 start-->
+            <textarea id="template01" style="display:none">
+                    <div class="tableWrapper01">
+                        <table>
+                            <tr>
+                                <td colspan="6">
+                                    <span class="titleName">样品1</span>
+                                    <i class="fa fa-trash-o " aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>样品名称 </td>
+                                <td colspan="5" class="sname inputTd"><input type="text" name="sname"
+                                                                             required="true"></td>
+                            </tr>
+                            <tr>
+                                <td>样品标记  </td>
+                                <td class="smark inputTd"><input type="text" name="smark"></td>
+                                <td>样品份数 </td>
+                                <td class="sNum inputTd"><input type="text" name="sNum" required="true"
+                                                                digits="true"></td>
+                                <td>数量、重量/每份 </td>
+                                <td class="sPinfo inputTd"><input type="text" name="sPinfo"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    检测项目
+                                    <div class="addItemBtn tips">添加检测项目</div>
+                                </td>
+                                <td colspan="3" data-history="true"><input class="choosedItem " style="display: none;"
+                                                                           type="" name="choosedItem"
+                                                                           required="true"></td>
+                                <td>
+                                    检测依据
+                                    <div class="tips">（本栏留空视为同意由
+                                    <br/> 本中心选定依据）</div>
+                                </td>
+                                <td class="sGist inputTd">
+                                    <textarea type="text" name="sGist"/>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div class="modalBox fade modalBox01">
+                                <div class="modalBox-dialog">
+                                    <div class="modalBox-content">
+                                      <div class="modalBox-header">
+                                            <button type="button" class="close" data-dismiss="modalBox"
+                                                    aria-label="Close">
+                                              <span aria-hidden="true">×</span>
+                                            </button>
+                                            <p class="modalBox-title">选择检测项目</p>
+                                      </div>
+                                      <div class="modalBox-body nopadding">
+                                            <div class="searchRow" style="">
+                                                    <div class="input-set0 input-set0-l">
+                                                        <div class="inputWrapper">
+                                                            <input class="input searchInputText" type="text" name=""
+                                                                   placeholder="输入搜索关键词">
+                                                            <i class="clearInput fa fa-times" aria-hidden="true"></i>
+                                                        </div>
+                                                        <input class="button search white" type="button" class="addon"
+                                                               value="搜 索">
+                                                    </div>  <!-- 搜索框 -->
+                                            </div>
+                                            <div class="chooseZone"></div>
+                                          
+                                      </div>
+                                      <div class="modalBox-header">
+                                            
+                                            <p class="modalBox-title">已选择检测项目</p>
+                                      </div>
+                                      <div class="modalBox-body">
+                                            <div class="choosedZone"></div>
+                                            <div class="sampleBtn"><span>确定</span></div>
+                                      </div>
+                                    </div>
+                              </div>
+                        </div>
+                    </div>
+                </textarea>
+            <!-- template01 end -->
+            <div class="c_contentPart">
+
+                <!-- form start -->
+                <form class="enform">
+                    <div class="tableSection">
+
+                    </div>
+                    <div class="addRow">
+                        <div id="addSample" class="sampleBtn"><span>新增样品</span></div>
+                    </div>
+
+                </form>
+                <!-- form end -->
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $.ajax({
+            url: 'test.php',
+            dataType: 'json'
+        }).then(function (data) {
+            tableMake(JSON.parse(data));
+        })
+    })
+</script>
+</body>
+</html>  

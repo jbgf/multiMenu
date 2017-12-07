@@ -1,0 +1,195 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+.tableSection table td .addItemBtn, .sampleBtn, #addSample span {
+  display: inline-block; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+#addSample span {
+  position: relative; }
+
+.tableSection table td input, .tableSection table td textarea {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.sampleBtn {
+  margin: 0 auto; }
+
+.tableSection table td .multi-ul, .tableSection table tr:nth-child(1) {
+  text-align: left; }
+
+.tableSection table, .addRow, .sampleBtn {
+  text-align: center !important; }
+
+.tableSection table tr:nth-child(1) i {
+  float: right; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+.tableSection table td .addItemBtn, .sampleBtn, #addSample span {
+  display: inline-block; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+#addSample span {
+  position: relative; }
+
+.tableSection table td input, .tableSection table td textarea {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.sampleBtn {
+  margin: 0 auto; }
+
+.tableSection table td .multi-ul, .tableSection table tr:nth-child(1) {
+  text-align: left; }
+
+.tableSection table, .addRow, .sampleBtn {
+  text-align: center !important; }
+
+.tableSection table tr:nth-child(1) i {
+  float: right; }
+
+.tableSection .tableWrapper01 + .tableWrapper01 {
+  padding-top: 20px; }
+
+.tableSection table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  vertical-align: middle;
+  font-size: 14.976px;
+  color: #333; }
+  .tableSection table td {
+    height: 38px;
+    /* &>div{padding:5px;} */
+    border: 1px solid #ddd; }
+    .tableSection table td .titleName {
+      font-size: 20.592px; }
+    .tableSection table td .tips {
+      font-size: 12px;
+      line-height: 1.2;
+      color: #999; }
+    .tableSection table td .addItemBtn {
+      background: #6eb92b;
+      color: #fff;
+      padding: 8px 5px;
+      margin-top: 10px;
+      cursor: pointer; }
+    .tableSection table td .multi-ul {
+      width: 100%; }
+    .tableSection table td input, .tableSection table td textarea {
+      border: none;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+      .tableSection table td input:focus, .tableSection table td input:active, .tableSection table td textarea:focus, .tableSection table td textarea:active {
+        outline: none; }
+  .tableSection table tr:nth-child(1) {
+    background: #6eb92b;
+    color: #fff; }
+    .tableSection table tr:nth-child(1) i {
+      font-size: 1.5em;
+      cursor: pointer; }
+    .tableSection table tr:nth-child(1) td {
+      padding: 3px 22px; }
+  .tableSection table tr:nth-child(3) td:nth-child(1) {
+    width: 10.86957%; }
+  .tableSection table tr:nth-child(3) td:nth-child(2) {
+    width: 22.64493%; }
+  .tableSection table tr:nth-child(3) td:nth-child(3) {
+    width: 10.86957%; }
+  .tableSection table tr:nth-child(3) td:nth-child(4) {
+    width: 22.46377%; }
+  .tableSection table tr:nth-child(3) td:nth-child(5) {
+    width: 15.21739%; }
+  .tableSection table tr:nth-child(3) td:nth-child(6) {
+    width: 17.93478%; }
+  .tableSection table tr:nth-child(4) td {
+    height: 145px; }
+  .tableSection table tr + tr td:nth-child(1) {
+    width: 110px; }
+
+.addRow {
+  padding-top: 30px;
+  padding-bottom: 50px; }
+
+.sampleBtn {
+  width: 165px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 0px;
+  cursor: pointer;
+  background: #54a4d5;
+  color: #fff;
+  font-size: 15.6px; }
+
+#addSample span:before {
+  position: absolute;
+  left: 0px;
+  width: auto;
+  color: #fff;
+  content: "+";
+  font-size: 15px;
+  left: -20px;
+  font-size: 25px; }
+
+.searchRow {
+  width: 50%;
+  margin: 0 auto;
+  padding: 13px 0; }
+  .searchRow input:focus {
+    outline: none; }
+
+/*input-set0 start*/
+.input-set0 {
+  height: 40px; }
+  .input-set0 input {
+    display: inline-block;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 500; }
+  .input-set0 .inputWrapper {
+    height: 100%;
+    width: 72%;
+    float: left;
+    position: relative; }
+    .input-set0 .inputWrapper .clearInput {
+      position: absolute;
+      right: 10px;
+      top: 27%;
+      font-size: 20px;
+      display: none;
+      cursor: pointer; }
+  .input-set0 input.input {
+    width: 100%;
+    padding-left: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #ddd; }
+  .input-set0 input.button {
+    width: 28%;
+    background: #54a4d5;
+    float: left; }
+
+/*input-set0 end*/
+
+/*# sourceMappingURL=maps/index.css.map */

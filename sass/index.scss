@@ -1,0 +1,120 @@
+@charset "utf-8";
+@import "mySassWare/_variable";
+@import "mySassWare/_mixin";
+@import "mySassWare/_function";
+
+$twr:120,250,120,248,168,198;
+
+.tableSection{
+    .tableWrapper01 + .tableWrapper01{padding-top: 20px}
+    table{
+       
+        
+        width:100%;
+        border-spacing:0;
+        border-collapse:collapse;
+        @extend %align-center;
+        vertical-align: middle;
+        font-size: $bigSize*0.8;
+        color:$baseTitleColor;
+        td{
+             height: 38px;
+             /* &>div{padding:5px;} */
+             @include border();
+             .titleName{font-size:$bigSize*1.1}
+             .tips{font-size:$smallSize;line-height:1.2;color:$gray;}
+             .addItemBtn{
+                background:$green;@extend %iBlock;color:$white;
+                padding:8px 5px;
+                margin-top: 10px;
+                @include cursor();
+             }
+             .multi-ul{width:100%;@extend %align-left;}
+             input,textarea{
+                @extend %full;
+                border:none;
+                &:focus,&:active{outline:none;}
+                -webkit-box-sizing:border-box;
+                        box-sizing:border-box;
+             }
+        }
+        tr{
+            &:nth-child(1){
+                background:$green;
+                @extend %align-left;
+                i{@extend %float-r;font-size:1.5em;@include cursor();}
+                
+                color:$white;
+                td{padding:3px 22px}
+            }
+            &:nth-child(3){
+                @include nth_un_width($rateArr:$twr,$string:"td")
+            }
+            &:nth-child(4){
+                td{height:145px;}
+            }
+            & + tr{
+                td{
+                    &:nth-child(1){width:110px}
+                   
+                }
+            }
+        }        
+    }
+ 
+}  
+
+.addRow{padding-top:30px;padding-bottom:50px;@extend %align-center;}
+.sampleBtn{
+    @include btn($width:165px,$height:45px,$radius:0px,$bg:$light-blue2){
+        color:$white;
+        @extend %mar-center;
+        font-size: $mediumSize;
+        @extend %iBlock;
+    }; 
+}
+#addSample{
+    span{
+            @extend %iBlock;
+            @include persudo($color:$white,$content:"+"){
+                left: -20px;
+                font-size: 25px;
+            }
+        }
+}
+
+.searchRow{
+    width:50%;margin:0 auto;
+    padding:13px 0;
+    input:focus{outline:none;}
+}
+/*input-set0 start*/
+.input-set0{
+        $height:40px;
+        $padding:10px;
+        input{display: inline-block;height: 100%;font-size: 16px;font-weight: 500;}
+        .inputWrapper{
+            height: 100%;
+            width:72%;
+            float:left;
+            position:relative;
+            .clearInput{
+                position:absolute;
+                right:$padding;
+                top: 27%;
+                font-size: 20px;
+                display: none;
+                cursor: pointer;        
+            }
+        }
+        input.input{
+            width:100%;
+            padding-left:$padding;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            @include border();
+        }
+        input.button{width:28%;background:#54a4d5;float:left;}
+        height: $height;
+}
+/*input-set0 end*/
