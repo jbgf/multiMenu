@@ -1,9 +1,9 @@
 jquery.multiMenu.js
 ===
->
 这是一个基于工作项目编写的jquery多层级菜单插件
 其中还引入了jsel插件扩展搜索功能，
 样式部分使用sass编写
+>
 插件配置
 ---
     allData:json,
