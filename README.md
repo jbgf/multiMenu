@@ -23,3 +23,6 @@ jquery.multiMenu.js
         content:true
     }，
     success:function(){}
+Usage Examples
+--------
+$ele.multiMenu(options);
