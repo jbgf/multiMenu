@@ -4,6 +4,7 @@ jquery.multiMenu.js
 其中还引入了jsel插件扩展搜索功能，
 样式部分使用sass编写
 >
+<img src="multiMenu/demo/demo.png">
 插件配置
 ---
     allData:json,
